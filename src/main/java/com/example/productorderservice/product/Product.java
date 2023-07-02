@@ -24,25 +24,4 @@ final class Product {
     public Long getId() {
         return this.id;
     }
-
-    public String name() {
-        return name;
-    }
-
-    public int price() {
-        return price;
-    }
-
-    public DiscountPolicy discountPolicy() {
-        return discountPolicy;
-    }
-
-    @Override
-    public String toString() {
-        return "Product[" +
-                "id=" + id + ", " +
-                "name=" + name + ", " +
-                "price=" + price + ", " +
-                "discountPolicy=" + discountPolicy + ']';
-    }
 }

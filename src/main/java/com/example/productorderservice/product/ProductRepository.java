@@ -12,7 +12,7 @@ class ProductRepository {
     private long sequence = 0;
     private Map<Long, Product> persistence = new HashMap<>();
 
-    public void save(final Product product) {
+    void save(final Product product) {
         product.assignId(++sequence);
         persistence.put(product.getId(), product);
     }
