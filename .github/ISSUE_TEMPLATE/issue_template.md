@@ -1,7 +1,14 @@
----
-name: Tracking issue
-about: Use this template for tracking new features.
-title: "[DATE]: [FEATURE NAME]"
-labels: tracking issue, needs triage
-assignees: octocat
----
+```css
+Given : `Here`
+  And : `Here`
+ When : `Here`
+ Than : `Here`
+```
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
