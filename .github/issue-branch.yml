@@ -1,0 +1,21 @@
+autoCloseIssue: defult
+branchName: test
+branches:
+  - label: enhancement
+    name: dev
+  - label: bug
+    name: staging
+conventionalLabels:
+  fix:
+    bug: ':bug:'
+    dependencies: ':ambulance:'
+    performance: ':zap:'
+    documentation: ':memo:'
+    security: ':lock:'
+  feature:
+    enhancement: ':sparkles:'
+  breaking:
+    breaking-change: ':boom:'
+    breaking change: ':boom:'
+
+commentMessage: '[✨New] ${issue.title} >> 📍${branchName}'
