@@ -1,6 +1,6 @@
 package com.example.productorderservice.order;
 
-import com.example.productorderservice.product.Product;
+import com.example.productorderservice.product.domain.Product;
 
 public interface OrderPort {
     Product getProductById(final Long productId);

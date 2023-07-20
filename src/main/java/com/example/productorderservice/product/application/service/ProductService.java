@@ -1,5 +1,7 @@
-package com.example.productorderservice.product;
+package com.example.productorderservice.product.application.service;
 
+import com.example.productorderservice.product.application.port.ProductPort;
+import com.example.productorderservice.product.domain.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,6 +10,7 @@ import javax.transaction.Transactional;
 
 @RestController
 @RequestMapping("/products")
+public
 class ProductService {
     private final ProductPort productPort;
 
@@ -18,7 +21,7 @@ class ProductService {
 
     @PostMapping
     @Transactional
-    public ResponseEntity<Object> addProduct(@RequestBody final AddProductRequest request) {
+    public ResponseEntity<Void> addProduct(@RequestBody final AddProductRequest request) {
         final Product product = new Product(request.name, request.price, request.discountPolicy);
         productPort.save(product);
 
@@ -49,4 +52,5 @@ class ProductService {
         productPort.save(product);
         return ResponseEntity.ok().build();
     }
+
 }
